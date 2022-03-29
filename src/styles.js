@@ -1768,3 +1768,82 @@ export const useMorePostsFromUserStyles = makeStyles(theme => ({
     }
   }
 }));
+
+export const useAddPostDialogStyles = makeStyles((theme) => ({
+  appBar: {
+    position: "relative",
+    background: "#fff !important",
+    color: "black !important",
+    display: "flex",
+    justifyContent: "space-between",
+    height: "54px !important",
+  },
+  toolbar: {
+    minHeight: "54px !important",
+  },
+  title: {
+    flex: 1,
+    fontWeight: 600,
+  },
+  paper: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "flex-center",
+    "& > *": {
+      margin: theme.spacing(1),
+    },
+  },
+  editor: {
+    flex: 1,
+  },
+  avatarLarge: {
+    width: theme.spacing(70),
+    height: theme.spacing(70),
+  },
+  input: {
+    padding: "10px !important",
+    fontSize: "14px !important",
+  },
+  root: {
+    border: "1px solid #e6e6e6",
+    marginTop: "10px !important",
+  },
+  underline: {
+    "&::before": {
+      border: "none !important",
+    },
+    "&::after": {
+      border: "none !important",
+    },
+    "&:hover&:before": {
+      border: "none !important",
+    },
+  },
+  buttonGroup: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+  },
+  labelContainer: {
+    display: "flex",
+    justifyContent: "center",
+  },
+  labelSection: {
+    minWidth: 560,
+    margin: "0px 400px"
+  },
+  labelWrapper: {
+    display: "flex",
+    alignItems: "center",
+  },
+  label: {
+    textAlign: "center",
+    border: "1px solid white",
+    borderRadius: "5%",
+    backgroundColor: "lightgray",
+    color: "white",
+    fontSize: "20px",
+    alignItems: "center",
+    display: "inline-block",
+  }
+}));

@@ -6,6 +6,7 @@ import { AddIcon, ExploreActiveIcon, ExploreIcon, HomeActiveIcon, HomeIcon, Like
 import { defaultCurrentUser, getDefaultUser } from "../../data";
 import { useNProgress } from "@tanem/react-nprogress";
 import { Mic } from "@material-ui/icons";
+import UploadPhotoDialog from "../post/UploadPhotoDialog"
 
 function Navbar({ minimalNavbar }) {
   const classes = useNavbarStyles();
@@ -141,6 +142,11 @@ const Links = ({ path }) => {
   const classes = useNavbarStyles();
   const [showList, setShowList] = React.useState(false);
   const [showTooltip, setShowTooltip] = React.useState(true);
+  const inputRef = React.useRef();
+  const [media, setMedia] = React.useState(null);
+  const [showUploadDialog, setShowUploadDialog] = React.useState(false);
+
+
   const handleToggleList = () => {
     setShowList(prev => !prev);
   }
@@ -160,16 +166,34 @@ const Links = ({ path }) => {
     setShowList(false);
   }
 
-  const handleClickUpload = () => {
-    console.log("upload");
+  const openFileInput = () => {
+    inputRef.current.click();
+  }
+
+  const handleUploadPhoto = (event) => {
+    setMedia(event.target.files[0]);
+    setShowUploadDialog(true);
+  }
+
+  const handleClose = () => {
+    setShowUploadDialog(false);
   }
 
   return (
     <div className={classes.linksContainer}>
       {/* {showList && <NotificationList handleHideList={handleHideList} />} */}
       <div className={classes.linksWrapper}>
+        {showUploadDialog && (
+          <UploadPhotoDialog media={media} handleClose={handleClose} />
+        )}
         <Hidden xsDown>
-          <Button onClick={handleClickUpload}>
+          <input
+            type="file"
+            style={{ display: "none" }}
+            ref={inputRef}
+            onChange={handleUploadPhoto}
+          />
+          <Button onClick={openFileInput}>
             <AddIcon />
             <span>&nbsp;&nbsp;</span>
             <Typography variant="body1" component="span" color="textPrimary">
