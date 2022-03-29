@@ -19,71 +19,76 @@ function Post() {
   if (loading) return <PostSkeleton />;
 
   return (
-    <div className={classes.postContainer}>
-      <article className={classes.article}>
-        {/* Post Header */}
-        <div className={classes.postHeader}>
-          <UserCard user={user} avatarSize={32} />
-          <MoreIcon
-            className={classes.MoreIcon}
-            onClick={() => setShowOptionDialog(true)}
-          />
-        </div>
-        {/* Post Image */}
-        <div className={classes.postImage}>
-          <img src={media} alt="Post media" className={classes.image} />
-        </div>
-        {/* Post Button */}
-        <div className={classes.postButtonsWrapper}>
-          <div className={classes.postButtons}>
-            <LikeButton />
-            <Link to={`/p/${id}`}>
-              <CommentIcon />
-            </Link>
-            <ShareIcon />
-            <SaveButton />
-          </div>
-          {/* Post Likes Count */}
-          <Typography className={classes.likes} variant="subtitle2">
-            <span>{likes === 1 ? "1 like" : `${likes} likes`}</span>
-          </Typography>
-          {/* Post Caption */}
-          <div className={classes.postCaptionContainer}>
-            <Typography
-              variant="subtitle2"
-              component="span"
-              className={classes.postCaption}
-              dangerouslySetInnerHTML={{ __html: caption }}
-            />
-          </div>
-          {comments.map(comment => (
-            <div key={comment.id}>
-              <Link to={`/${comment.user.username}`}>
-                <Typography>
-                  {comment.user.name}
-                </Typography>
-                <Typography>
-                  {comment.content}
-                </Typography>
-              </Link>
-            </div>
-          ))}
-          {/* Post Comment Area */}
-
-          <Typography color="textSecondary" className={classes.datePosted}>
-            5 DAYS AGO
-          </Typography>
-          <Hidden xsDown>
-            <div className={classes.comment}>
-              <Divider />
-              <Comment />
-            </div>
-          </Hidden>
-        </div>
-
-      </article>
-      {showOptionDialog && <OptionDialog onClose={() => setShowOptionDialog(false)} />}
+    <div style={{ display: "flex", justifyContent: "center" }}>
+      <div className={classes.postImage}>
+        <img src={media} alt="Post media" className={classes.image} />
+      </div>
     </div>
+    // <div className={classes.postContainer}>
+    //   <article className={classes.article}>
+    //     {/* Post Header */}
+    //     <div className={classes.postHeader}>
+    //       <UserCard user={user} avatarSize={32} />
+    //       <MoreIcon
+    //         className={classes.MoreIcon}
+    //         onClick={() => setShowOptionDialog(true)}
+    //       />
+    //     </div>
+    //     {/* Post Image */}
+    //     <div className={classes.postImage}>
+    //       <img src={media} alt="Post media" className={classes.image} />
+    //     </div>
+    //     {/* Post Button */}
+    //     <div className={classes.postButtonsWrapper}>
+    //       <div className={classes.postButtons}>
+    //         <LikeButton />
+    //         <Link to={`/p/${id}`}>
+    //           <CommentIcon />
+    //         </Link>
+    //         <ShareIcon />
+    //         <SaveButton />
+    //       </div>
+    //       {/* Post Likes Count */}
+    //       <Typography className={classes.likes} variant="subtitle2">
+    //         <span>{likes === 1 ? "1 like" : `${likes} likes`}</span>
+    //       </Typography>
+    //       {/* Post Caption */}
+    //       <div className={classes.postCaptionContainer}>
+    //         <Typography
+    //           variant="subtitle2"
+    //           component="span"
+    //           className={classes.postCaption}
+    //           dangerouslySetInnerHTML={{ __html: caption }}
+    //         />
+    //       </div>
+    //       {comments.map(comment => (
+    //         <div key={comment.id}>
+    //           <Link to={`/${comment.user.username}`}>
+    //             <Typography>
+    //               {comment.user.name}
+    //             </Typography>
+    //             <Typography>
+    //               {comment.content}
+    //             </Typography>
+    //           </Link>
+    //         </div>
+    //       ))}
+    //       {/* Post Comment Area */}
+
+    //       <Typography color="textSecondary" className={classes.datePosted}>
+    //         5 DAYS AGO
+    //       </Typography>
+    //       <Hidden xsDown>
+    //         <div className={classes.comment}>
+    //           <Divider />
+    //           <Comment />
+    //         </div>
+    //       </Hidden>
+    //     </div>
+
+    //   </article>
+    //   {showOptionDialog && <OptionDialog onClose={() => setShowOptionDialog(false)} />}
+    // </div>
   )
 }
 
