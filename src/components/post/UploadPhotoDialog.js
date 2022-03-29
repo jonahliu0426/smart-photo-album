@@ -102,13 +102,13 @@ function UploadPhotoDialog({ media, handleClose }) {
                 </Toolbar>
             </AppBar>
             <Divider />
-            <Paper className={classes.paper}>
-                <Avatar
+            <div className={classes.paper}>
+                <img
                     src={URL.createObjectURL(media)}
                     className={classes.avatarLarge}
                     variant="square"
                 />
-            </Paper>
+            </div>
             <div className={classes.labelContainer}>
                 <div className={classes.labelSection}>
 
