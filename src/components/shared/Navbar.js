@@ -2,11 +2,8 @@ import { AppBar, Button, Avatar, Fade, Grid, Hidden, InputBase, Typography, Zoom
 import React from "react";
 import { useNavbarStyles, WhiteTooltip, RedTooltip } from "../../styles";
 import { Link, useHistory } from 'react-router-dom';
-import logo from '../../images/logo.png'
 import { AddIcon, ExploreActiveIcon, ExploreIcon, HomeActiveIcon, HomeIcon, LikeActiveIcon, LikeIcon, LoadingIcon } from "../../icons";
 import { defaultCurrentUser, getDefaultUser } from "../../data";
-import NotificationTooltip from '../notification/NotificationTooltip';
-import NotificationList from "../notification/NotificationList";
 import { useNProgress } from "@tanem/react-nprogress";
 import { Mic } from "@material-ui/icons";
 
@@ -169,7 +166,7 @@ const Links = ({ path }) => {
 
   return (
     <div className={classes.linksContainer}>
-      {showList && <NotificationList handleHideList={handleHideList} />}
+      {/* {showList && <NotificationList handleHideList={handleHideList} />} */}
       <div className={classes.linksWrapper}>
         <Hidden xsDown>
           <Button onClick={handleClickUpload}>
