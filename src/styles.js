@@ -1837,13 +1837,13 @@ export const useAddPostDialogStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   label: {
-    textAlign: "center",
-    border: "1px solid white",
-    borderRadius: "5%",
-    backgroundColor: "lightgray",
-    color: "white",
-    fontSize: "20px",
+    textAlign: "center !important",
+    border: "1px solid white !important",
+    borderRadius: "5% important!",
+    backgroundColor: "lightgray !important",
+    color: "white !important",
+    fontSize: "20px !important",
     alignItems: "center",
-    display: "inline-block",
+    display: "inline-block !important",
   }
 }));
