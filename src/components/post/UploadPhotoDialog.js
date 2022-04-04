@@ -18,6 +18,7 @@ import { ArrowBackIos, PinDrop, Label } from "@material-ui/icons";
 // import { UserContext } from "../../App";
 // import serialize from "../../utils/serialize";
 import handleImageUpload from "../../utils/handleImageUpload";
+import { useHistory } from "react-router-dom";
 // import TagIcon from '@mui/icons-material/Tag';
 // import { useMutation } from "@apollo/react-hooks";
 // import { CREATE_POST } from "../../graphql/mutations";
@@ -39,21 +40,16 @@ function UploadPhotoDialog({ media, handleClose }) {
     const [submitting, setSubmitting] = React.useState(false);
     const [labels, setLabels] = React.useState([]);
     const [labelInput, setLabelInput] = React.useState('');
+    const [filename, setFilename] = React.useState(media['name']);
+    const history = useHistory();
 
     // const [createPost] = useMutation(CREATE_POST);
 
-    async function handleSharePost() {
+
+    async function handleUploadPhoto() {
         setSubmitting(true);
-        const url = await handleImageUpload(media);
-        const variables = {
-            // userId: currentUserId,
-            // location,
-            // caption: serialize({ children: value }),
-            media: url,
-        };
-        // await createPost({ variables });
+        const data = await handleImageUpload({ media, filename, labels });
         setSubmitting(false);
-        window.location.reload();
     }
 
     const handleAddLabel = (event) => {
@@ -86,7 +82,7 @@ function UploadPhotoDialog({ media, handleClose }) {
                         variant="contained"
                         // className={classes.share}
                         disabled={submitting}
-                        onClick={handleSharePost}
+                        onClick={handleUploadPhoto}
                     >
                         Confirm
                     </Button>
@@ -111,7 +107,19 @@ function UploadPhotoDialog({ media, handleClose }) {
             </div>
             <div className={classes.labelContainer}>
                 <div className={classes.labelSection}>
-
+                    <TextField
+                        fullWidth
+                        placeholder="Label"
+                        value={filename}
+                        InputProps={{
+                            classes: {
+                                root: classes.root,
+                                input: classes.input,
+                                underline: classes.underline,
+                            },
+                        }}
+                        onChange={(event) => setFilename(event.target.value)}
+                    />
                     <TextField
                         fullWidth
                         placeholder="Label"
@@ -139,7 +147,7 @@ function UploadPhotoDialog({ media, handleClose }) {
                     />
                     {labels && <div className={classes.labelWrapper}>{labels && (
                         labels.map((label, i) => (
-                            <Button className={classes.label} onClick={() => handleDeleteLabel(i)}>{label}&nbsp;&nbsp;</Button>
+                            <Button key={i} className={classes.label} onClick={() => handleDeleteLabel(i)}>{label}&nbsp;&nbsp;</Button>
 
                         ))
                     )}</div>}
