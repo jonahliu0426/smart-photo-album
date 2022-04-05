@@ -7,11 +7,10 @@ function GridPost({ post }) {
   const history = useHistory();
 
   const classes = useGridPostStyles();
-  const { media, comments, likes } = post
 
   const handleOpenPostModal = () => {
     history.push({
-      pathname: `/p/${post.id}`,
+      pathname: `/p/${post}`,
       state: { modal: true }
     })
   }
@@ -22,14 +21,14 @@ function GridPost({ post }) {
       <div className={classes.gridPostOverlay}>
         <div className={classes.gridPostInfo}>
           <span className={classes.likes} />
-          <Typography>{likes}</Typography>
+          {/* <Typography>{likes}</Typography> */}
         </div>
         <div className={classes.gridPostInfo}>
           <span className={classes.comments} />
-          <Typography>{comments.length}</Typography>
+          {/* <Typography>{comments.length}</Typography> */}
         </div>
       </div>
-      <img src={media} alt="Post cover" className={classes.image} />
+      <img src={post} alt="Post cover" className={classes.image} />
     </div>
   )
 }
