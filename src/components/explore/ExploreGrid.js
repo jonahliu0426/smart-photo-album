@@ -4,9 +4,11 @@ import { getDefaultPost } from "../../data";
 import { LoadingLargeIcon } from "../../icons";
 import { useExploreGridStyles } from "../../styles";
 import GridPost from "../shared/GridPost"
+import { ResultContext } from "../../App";
 
 
 function ExploreGrid() {
+  const { state, dispatch } = React.useContext(ResultContext);
   const classes = useExploreGridStyles();
   const [loading, setLoading] = React.useState(true);
 
@@ -14,7 +16,7 @@ function ExploreGrid() {
     const timeOut = setTimeout(() => setLoading(false), 1000);
     return () => clearTimeout(timeOut);
   }, [])
-
+  console.log('state', state);
   return (
     <>
       <Typography
@@ -31,8 +33,9 @@ function ExploreGrid() {
       ) : (
         <article className={classes.article}>
           <div className={classes.postContainer}>
-            {Array.from({ length: 20 }, () => getDefaultPost()).map(post => (
-              <GridPost key={post.id} post={post} />
+            {state?.searchResult?.map((post, idx) => (
+              //<span>{post}</span>
+              <GridPost key={idx} post={post} />
             ))}
           </div>
         </article>

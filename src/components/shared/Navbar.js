@@ -7,6 +7,7 @@ import { defaultCurrentUser, getDefaultUser } from "../../data";
 import { useNProgress } from "@tanem/react-nprogress";
 import { Mic } from "@material-ui/icons";
 import UploadPhotoDialog from "../post/UploadPhotoDialog"
+import { ResultContext } from "../../App";
 
 function Navbar({ minimalNavbar }) {
   const classes = useNavbarStyles();
@@ -54,6 +55,7 @@ const Logo = () => {
 }
 
 const Search = ({ history }) => {
+  const { state, dispatch } = React.useContext(ResultContext);
   const classes = useNavbarStyles();
   const [loading] = React.useState(false);
   const [results, setResults] = React.useState([])
@@ -72,6 +74,24 @@ const Search = ({ history }) => {
 
   const handleClickMic = () => {
     console.log('mic')
+  }
+
+  const handleClickSearch = async () => {
+    setQuery("");
+    try {
+      const fr = new FileReader();
+      var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+      };
+      const response = await fetch(`https://urmkm2ivv6.execute-api.us-east-1.amazonaws.com/beta/search?query=${query}`, requestOptions)
+      const data = await response.json();
+      dispatch({ type: "ADD_RESULTS", payload: { data } })
+      console.log(data);
+    } catch (err) {
+      console.error(err)
+    }
+
   }
 
   return (
@@ -133,6 +153,9 @@ const Search = ({ history }) => {
         placeholder="Search"
       >
       </InputBase>
+      <Button color="primary" variant="contained" onClick={handleClickSearch}>
+        Search
+      </Button>
       {/* </WhiteTooltip> */}
     </Hidden>
   )
