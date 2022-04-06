@@ -1,0 +1,21 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-smartphotoalbum-dev-04616-authRole",
+      "UnauthRoleArn": "arn:aws:iam::257603592192:role/amplify-smartphotoalbum-dev-04616-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::257603592192:role/amplify-smartphotoalbum-dev-04616-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-smartphotoalbum-dev-04616-deployment",
+      "UnauthRoleName": "amplify-smartphotoalbum-dev-04616-unauthRole",
+      "StackName": "amplify-smartphotoalbum-dev-04616",
+      "StackId": "arn:aws:cloudformation:us-east-1:257603592192:stack/amplify-smartphotoalbum-dev-04616/7f7c6aa0-b564-11ec-9d2c-0e8e84c0d477",
+      "AmplifyAppId": "dordyxjyembus"
+    },
+    "categories": {
+      "auth": {
+        "smartphotoalbum643de7e8": {},
+        "true": {}
+      }
+    }
+  }
+}

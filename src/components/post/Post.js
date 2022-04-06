@@ -1,6 +1,6 @@
 import { Button, Divider, Hidden, TextField, Typography } from "@material-ui/core";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { usePostStyles } from "../../styles";
 import UserCard from "../shared/UserCard";
 import { MoreIcon, CommentIcon, ShareIcon, UnlikeIcon, LikeIcon, SaveIcon, RemoveIcon } from "../../icons";
@@ -11,17 +11,18 @@ import PostSkeleton from "./PostSkeleton";
 function Post() {
   const classes = usePostStyles();
   const [loading, setLoading] = React.useState(true);
-  const { id, media, likes, user, caption, comments } = defaultPost;
+  // const { id, media, likes, user, caption, comments } = defaultPost;
   const [showOptionDialog, setShowOptionDialog] = React.useState(false);
+  const { postId } = useParams();
 
-  setTimeout(() => setLoading(false), 2000);
+  setTimeout(() => setLoading(false), 500);
 
   if (loading) return <PostSkeleton />;
 
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
       <div className={classes.postImage}>
-        <img src={media} alt="Post media" className={classes.image} />
+        <img src={'https://smart-photo-album-storage.s3.amazonaws.com/' + postId} alt="Post media" className={classes.Image} />
       </div>
     </div>
     // <div className={classes.postContainer}>

@@ -5,12 +5,17 @@ import { useHistory } from "react-router-dom";
 
 function GridPost({ post }) {
   const history = useHistory();
-
+  const object_key = typeof (post) === 'string' ? post.slice(post.lastIndexOf('/') + 1) : '';
   const classes = useGridPostStyles();
+  console.log(post);
+  console.log(object_key)
 
   const handleOpenPostModal = () => {
+    const object_key = typeof (post) === 'string' ? post.slice(post.lastIndexOf('/') + 1) : '';
+    console.log('post', post);
+    console.log('object key, ', object_key);
     history.push({
-      pathname: `/p/${post}`,
+      pathname: `/p/${object_key}`,
       state: { modal: true }
     })
   }

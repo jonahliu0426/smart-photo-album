@@ -665,7 +665,8 @@ export const usePostStyles = makeStyles(theme => ({
     }
   },
   image: {
-    width: "100%"
+    width: "100%",
+    height: "100%",
   },
   postButtons: {
     display: "grid",
