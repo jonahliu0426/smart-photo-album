@@ -3,7 +3,7 @@ import Amplify, { Storage, Predictions } from 'aws-amplify';
 import { AmazonAIPredictionsProvider } from '@aws-amplify/predictions';
 import awsconfig from '../aws-exports';
 import mic from 'microphone-stream';
-import { Mic } from "@material-ui/icons";
+import { Mic, Stop } from "@material-ui/icons";
 import { Button } from "@material-ui/core";
 
 
@@ -91,7 +91,7 @@ export default function SpeechToText({ setQuery }) {
                             variant="coutlined"
                             style={{ backgroundColor: 'red', padding: "6px 12px" }}
                         >
-                            <Mic />
+                            <Stop />
                         </Button>}
                     {!recording &&
                         <Button
