@@ -6,3 +6,5 @@
 
 ## 2. AWS Cloudformation Stack Template
 https://cf-templates-64533atv427d-us-east-1.s3.amazonaws.com/2022098YTc-smart-photo-stack-template4pidyf31jbs
+
+The AWS Rekognition service is called inside index-photos lambda function, and AWS Lex is called from search-photos lamdba function.
