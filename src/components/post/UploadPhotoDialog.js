@@ -57,7 +57,7 @@ function UploadPhotoDialog({ media, handleClose }) {
         setLabels(prevLabels => {
             return [
                 ...labels,
-                labelInput
+                labelInput.toLowerCase().trim()
             ]
         });
         setLabelInput('')
