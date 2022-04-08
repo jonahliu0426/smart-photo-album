@@ -87,9 +87,7 @@ const Search = ({ history }) => {
 
 
   const handleClickSearch = async () => {
-    setQuery("");
     try {
-      const fr = new FileReader();
       var requestOptions = {
         method: 'GET',
         redirect: 'follow'
@@ -122,18 +120,7 @@ const Search = ({ history }) => {
           ) : (
             <>
               <span onClick={handleClearInput} className={classes.clearIcon} />
-              <SpeechToText setQuery={setQuery} />
-              {/* <div onClick={handleClickMic}>
-                {isRecording ? (
-                  <Button variant="coutlined" style={{ backgroundColor: 'red', padding: "6px 12px" }}>
-                    <Mic />
-                  </Button>
-                ) : (
-                  <Button variant="coutlined" style={{ padding: "6px 12px" }}>
-                    <Mic />
-                  </Button>
-                )}
-              </div> */}
+              <SpeechToText setQuery={setQuery} query={query} />
             </>
           )
         }
