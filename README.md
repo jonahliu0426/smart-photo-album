@@ -5,4 +5,4 @@
 
 
 ## 2. AWS Cloudformation Stack Template
-s3://cf-templates-64533atv427d-us-east-1/2022098YTc-smart-photo-stack-template4pidyf31jbs
+https://cf-templates-64533atv427d-us-east-1.s3.amazonaws.com/2022098YTc-smart-photo-stack-template4pidyf31jbs
