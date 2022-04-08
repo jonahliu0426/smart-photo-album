@@ -3,8 +3,9 @@ import Amplify, { Storage, Predictions } from 'aws-amplify';
 import { AmazonAIPredictionsProvider } from '@aws-amplify/predictions';
 import awsconfig from '../aws-exports';
 import mic from 'microphone-stream';
-import { Mic, Stop } from "@material-ui/icons";
+import { Mic, Search, Stop } from "@material-ui/icons";
 import { Button } from "@material-ui/core";
+import { ResultContext } from "../App";
 
 
 
@@ -12,9 +13,9 @@ Amplify.configure(awsconfig);
 Amplify.addPluggable(new AmazonAIPredictionsProvider());
 
 
-export default function SpeechToText({ setQuery }) {
+export default function SpeechToText({ setQuery, query }) {
     // const [response, setResponse] = useState("Press 'start recording' to begin your transcription. Press STOP recording once you finish speaking.")
-
+    const { state, dispatch } = React.useContext(ResultContext);
     function AudioRecorder(props) {
         const [recording, setRecording] = useState(false);
         const [micStream, setMicStream] = useState();
@@ -116,7 +117,10 @@ export default function SpeechToText({ setQuery }) {
                 },
                 // language: "en-US", // other options are "en-GB", "fr-FR", "fr-CA", "es-US"
             },
-        }).then(({ transcription: { fullText } }) => setQuery(fullText))
+        }).then(({ transcription: { fullText } }) => {
+            setQuery(fullText);
+            searchPhoto(fullText, dispatch);
+        })
             .catch(err => setQuery(JSON.stringify(err, null, 2)))
     }
 
@@ -128,4 +132,19 @@ export default function SpeechToText({ setQuery }) {
             </div>
         </div>
     );
+}
+
+const searchPhoto = async (query, dispatch) => {
+    try {
+        var requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+        };
+        const response = await fetch(`https://urmkm2ivv6.execute-api.us-east-1.amazonaws.com/beta/search?query=${query}`, requestOptions)
+        const data = await response.json();
+        dispatch({ type: "ADD_RESULTS", payload: { data } })
+        console.log(data);
+    } catch (err) {
+        console.error(err)
+    }
 }
