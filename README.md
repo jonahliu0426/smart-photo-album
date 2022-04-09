@@ -7,8 +7,8 @@
 ## 2. Procedure
 
 ### 2.1 AWS Cloudformation Stack Template
-  https://cf-templates-64533atv427d-us-east-1.s3.amazonaws.com/2022098YTc-smart-photo-stack-template4pidyf31jbs
-
+  https://cf-templates-64533atv427d-us-east-1.s3.amazonaws.com/2022099uN7-template1dlwnef2uqbf
+  
   The AWS Rekognition service is called inside index-photos lambda function
   
 ### 2.2 Lambda index-photos (LF1)
