@@ -1,5 +1,7 @@
 # smart-photot-album
 
+Note: AWS Transcribe requires microphone, which requires secured http connection so cannot be enabled on a static website hosting on S3, however it works perfectly fine under local environment. If enable the browser to ignore non-secured connection as secured, the browser can be tricked to allow microphone in non-secured connections
+
 ## 1. Architecture
 ![image](https://user-images.githubusercontent.com/49350284/162481178-12d81ad0-c625-4a2c-baef-ef59285a2996.png)
 
@@ -7,6 +9,9 @@
 ## 2. Procedure
 
 ### 2.1 AWS Cloudformation Stack Template
+  Please find template file in the template folder.
+  or 
+  Download from link below:
   https://cf-templates-64533atv427d-us-east-1.s3.amazonaws.com/2022099uN7-template1dlwnef2uqbf
   
   The AWS Rekognition service is called inside index-photos lambda function
