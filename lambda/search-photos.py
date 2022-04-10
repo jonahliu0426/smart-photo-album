@@ -24,11 +24,14 @@ headers = {
 }
 
 def get_random_id():
-    # printing lowercase
     letters = string.ascii_lowercase
     return ''.join(random.choice(letters) for i in range(10))
 
 def get_photo(query):
+    """
+    query the image keys with corresponding labels from the OpenSearch
+    return the S3 object url
+    """
     photo_object_keys = []
     data = {
         'query': {
@@ -44,9 +47,7 @@ def get_photo(query):
         },
         'size': RESULT_SIZE
     }
-        # 'size': RESULT_SIZE
     response = http.request("GET", url=BASE_URL + '/_search', headers=headers, body=json.dumps(data))
-    print(response.data)
     
     for photo in json.loads(response.data)['hits']['hits']:
         photo_object_keys.append('https://smart-photo-album-storage.s3.amazonaws.com/' + photo["_id"])
@@ -54,13 +55,13 @@ def get_photo(query):
     return photo_object_keys
 
 def lambda_handler(event, context):
-    # TODO implement
     userId = "perchance"
     query = event["multiValueQueryStringParameters"]["query"][0]
-    print('query: ', query)
     
     try:
-        # TODO: write code...
+        """
+        disambiguate user-input query from AWS Lex
+        """
         lex_bot = boto3.client('lex-runtime')
         response = lex_bot.post_text(botName="SearchPhotoBot", botAlias="dev", userId=userId, inputText=query)
         if not response['message']:
@@ -72,11 +73,11 @@ def lambda_handler(event, context):
     except Exception:
         return ''
     
-
-    print("response: ", response['message'])
+    # clean the query
     query_list = [d.strip() for d in response['message'].split(',')]
     object_list = []
     
+    # append S3 image url to the response data
     for query in query_list:
         object_list.extend(get_photo(query))
     
