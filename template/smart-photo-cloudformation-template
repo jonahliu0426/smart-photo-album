@@ -1,0 +1,420 @@
+AWSTemplateFormatVersion: 2010-09-09
+Metadata:
+  'AWS::CloudFormation::Designer':
+    1a42a406-8f05-45a9-bc51-3f9f92342589:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 340
+        'y': 110
+      z: 4
+      parent: 3c9023b8-c7a9-4c15-8371-153b0c539f7f
+      embeds: []
+      iscontainedinside:
+        - 8147c22b-8c1d-42b8-9dd6-8db1ba72e386
+        - 3c9023b8-c7a9-4c15-8371-153b0c539f7f
+        - 3c9023b8-c7a9-4c15-8371-153b0c539f7f
+        - 3c9023b8-c7a9-4c15-8371-153b0c539f7f
+        - 3c9023b8-c7a9-4c15-8371-153b0c539f7f
+        - 3c9023b8-c7a9-4c15-8371-153b0c539f7f
+        - 3c9023b8-c7a9-4c15-8371-153b0c539f7f
+        - 3c9023b8-c7a9-4c15-8371-153b0c539f7f
+        - 3c9023b8-c7a9-4c15-8371-153b0c539f7f
+        - 3c9023b8-c7a9-4c15-8371-153b0c539f7f
+        - 3c9023b8-c7a9-4c15-8371-153b0c539f7f
+        - 3c9023b8-c7a9-4c15-8371-153b0c539f7f
+        - 3c9023b8-c7a9-4c15-8371-153b0c539f7f
+        - 3c9023b8-c7a9-4c15-8371-153b0c539f7f
+        - 3c9023b8-c7a9-4c15-8371-153b0c539f7f
+        - 3c9023b8-c7a9-4c15-8371-153b0c539f7f
+        - 3c9023b8-c7a9-4c15-8371-153b0c539f7f
+        - 3c9023b8-c7a9-4c15-8371-153b0c539f7f
+        - 3c9023b8-c7a9-4c15-8371-153b0c539f7f
+        - 3c9023b8-c7a9-4c15-8371-153b0c539f7f
+        - 3c9023b8-c7a9-4c15-8371-153b0c539f7f
+        - 3c9023b8-c7a9-4c15-8371-153b0c539f7f
+      dependson:
+        - 3fd7b578-8437-4269-8f43-f0c634500fbd
+    c1f93f27-95d6-4fb7-b712-f732e6bc16bd:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 220
+        'y': 140
+      z: 3
+      parent: a059d345-4bbb-496a-a515-bfa8fa9e0a2c
+      embeds: []
+      iscontainedinside:
+        - a059d345-4bbb-496a-a515-bfa8fa9e0a2c
+        - a059d345-4bbb-496a-a515-bfa8fa9e0a2c
+        - a059d345-4bbb-496a-a515-bfa8fa9e0a2c
+        - a059d345-4bbb-496a-a515-bfa8fa9e0a2c
+        - 8147c22b-8c1d-42b8-9dd6-8db1ba72e386
+        - a059d345-4bbb-496a-a515-bfa8fa9e0a2c
+        - a059d345-4bbb-496a-a515-bfa8fa9e0a2c
+        - a059d345-4bbb-496a-a515-bfa8fa9e0a2c
+        - a059d345-4bbb-496a-a515-bfa8fa9e0a2c
+        - a059d345-4bbb-496a-a515-bfa8fa9e0a2c
+        - a059d345-4bbb-496a-a515-bfa8fa9e0a2c
+      dependson:
+        - dbc2226d-0059-411c-b43d-cb3c8c875da2
+    a3ba7fb3-d42a-4214-83ec-781a8cea28b0:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 10
+        'y': 50
+      z: 1
+      embeds: []
+      dependson:
+        - 1a42a406-8f05-45a9-bc51-3f9f92342589
+        - c1f93f27-95d6-4fb7-b712-f732e6bc16bd
+    dbc2226d-0059-411c-b43d-cb3c8c875da2:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 220
+        'y': 360
+      z: 1
+      embeds: []
+      dependson:
+        - 642e0e3c-6787-4b65-87d6-ef823e8924db
+    3fd7b578-8437-4269-8f43-f0c634500fbd:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 570
+        'y': 50
+      z: 1
+      embeds: []
+      dependson:
+        - 478a1d38-f63a-453d-b768-2bc3a18055f6
+        - 643a2bf7-4709-41d6-ab18-6216b75829a9
+    642e0e3c-6787-4b65-87d6-ef823e8924db:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 570
+        'y': 360
+      z: 1
+      embeds: []
+      dependson:
+        - 478a1d38-f63a-453d-b768-2bc3a18055f6
+    478a1d38-f63a-453d-b768-2bc3a18055f6:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 570
+        'y': 150
+      z: 1
+      embeds: []
+    a059d345-4bbb-496a-a515-bfa8fa9e0a2c:
+      size:
+        width: 300
+        height: 300
+      position:
+        x: 190
+        'y': -40
+      z: 2
+      parent: 8147c22b-8c1d-42b8-9dd6-8db1ba72e386
+      embeds:
+        - 3c9023b8-c7a9-4c15-8371-153b0c539f7f
+        - e63b86c2-c8ea-4790-8eca-c905ff73ac7b
+        - c1f93f27-95d6-4fb7-b712-f732e6bc16bd
+    8147c22b-8c1d-42b8-9dd6-8db1ba72e386:
+      size:
+        width: 340
+        height: 360
+      position:
+        x: 190
+        'y': -70
+      z: 1
+      embeds:
+        - a059d345-4bbb-496a-a515-bfa8fa9e0a2c
+    e63b86c2-c8ea-4790-8eca-c905ff73ac7b:
+      size:
+        width: 120
+        height: 120
+      position:
+        x: 190
+        'y': 100
+      z: 3
+      parent: a059d345-4bbb-496a-a515-bfa8fa9e0a2c
+      embeds: []
+    3c9023b8-c7a9-4c15-8371-153b0c539f7f:
+      size:
+        width: 150
+        height: 150
+      position:
+        x: 340
+        'y': 80
+      z: 3
+      parent: a059d345-4bbb-496a-a515-bfa8fa9e0a2c
+      embeds:
+        - 1a42a406-8f05-45a9-bc51-3f9f92342589
+    643a2bf7-4709-41d6-ab18-6216b75829a9:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 700
+        'y': 50
+      z: 1
+      embeds: []
+    d212b898-2f03-4555-985a-aeaf39504501:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 700
+        'y': -90
+      z: 1
+      embeds: []
+Resources:
+  SmartPhotoFrontendS3B2F5KE:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      AccessControl: PublicRead
+      BucketName: smart-photo-webapp-frontend
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: a3ba7fb3-d42a-4214-83ec-781a8cea28b0
+    DependsOn:
+      - GETAGM4N4QW
+      - PUTAGM18EHQ
+  SmartPhotoStorageS3B32KPE:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      AccessControl: PublicReadWrite
+      BucketName: smart-photo-webapp-storage
+      CorsConfiguration:
+        CorsRules:
+          - AllowedHeaders:
+              - '*'
+            AllowedMethods:
+              - PUT
+              - POST
+              - DELETE
+              - GET
+              - HEAD
+            AllowedOrigins:
+              - '*'
+            ExposedHeaders: []
+            Id: myCORSRuleId1
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: dbc2226d-0059-411c-b43d-cb3c8c875da2
+    DependsOn:
+      - IndexPhotoLF4KVE2
+  SmartPhotoOSSDYDR0:
+    Type: 'AWS::OpenSearchService::Domain'
+    Properties:
+      EBSOptions:
+        EBSEnabled: true
+        Iops: '0'
+        VolumeSize: '20'
+        VolumeType: gp2
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 478a1d38-f63a-453d-b768-2bc3a18055f6
+  SearchPhotoLF3WBUS:
+    Type: 'AWS::Lambda::Function'
+    Properties:
+      Role: 'arn:aws:iam::257603592192:role/lambda-read-s3-bucket-object-role'
+      Code:
+        S3Bucket: smart-photo-lambda-stack
+        S3Key: search-photos.zip
+      Runtime: python3.9
+      Handler: lambda_handler
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 3fd7b578-8437-4269-8f43-f0c634500fbd
+    DependsOn:
+      - SmartPhotoOSSDYDR0
+      - LB1YL0T
+  IndexPhotoLF4KVE2:
+    Type: 'AWS::Lambda::Function'
+    Properties:
+      Role: 'arn:aws:iam::257603592192:role/lambda-read-s3-bucket-object-role'
+      Code:
+        S3Bucket: smart-photo-lambda-stack
+        S3Key: index-photos.zip
+      Runtime: python3.9
+      Handler: lambda_handler
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 642e0e3c-6787-4b65-87d6-ef823e8924db
+    DependsOn:
+      - SmartPhotoOSSDYDR0
+  PUTAGM18EHQ:
+    Type: 'AWS::ApiGateway::Method'
+    Properties:
+      HttpMethod: PUT
+      ResourceId: !Ref AGRZQMH
+      RestApiId: !Ref AGRA4FXUW
+      AuthorizationType: NONE
+      RequestParameters:
+        method.request.path.bucket: true
+        method.request.path.item: true
+        method.request.path.x-amz-meta-label: true
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: c1f93f27-95d6-4fb7-b712-f732e6bc16bd
+    DependsOn:
+      - SmartPhotoStorageS3B32KPE
+  GETAGM4N4QW:
+    Type: 'AWS::ApiGateway::Method'
+    Properties:
+      HttpMethod: GET
+      ResourceId: !Ref AGR4EL9V
+      RestApiId: !Ref AGRA4FXUW
+      AuthorizationType: NONE
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 1a42a406-8f05-45a9-bc51-3f9f92342589
+    DependsOn:
+      - SearchPhotoLF3WBUS
+  AGRZQMH:
+    Type: 'AWS::ApiGateway::Resource'
+    Properties:
+      ParentId: !GetAtt 
+        - AGRA4FXUW
+        - RootResourceId
+      PathPart: bucket
+      RestApiId: !Ref AGRA4FXUW
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: a059d345-4bbb-496a-a515-bfa8fa9e0a2c
+  AGRA4FXUW:
+    Type: 'AWS::ApiGateway::RestApi'
+    Properties:
+      Name: MyRestAPI
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 8147c22b-8c1d-42b8-9dd6-8db1ba72e386
+  AGR23P86:
+    Type: 'AWS::ApiGateway::Resource'
+    Properties:
+      ParentId: !GetAtt 
+        - AGRZQMH
+        - ResourceId
+      PathPart: item
+      RestApiId: !Ref AGRA4FXUW
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: e63b86c2-c8ea-4790-8eca-c905ff73ac7b
+  AGR4EL9V:
+    Type: 'AWS::ApiGateway::Resource'
+    Properties:
+      ParentId: !GetAtt 
+        - AGRA4FXUW
+        - RootResourceId
+      PathPart: search
+      RestApiId: !Ref AGRA4FXUW
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 3c9023b8-c7a9-4c15-8371-153b0c539f7f
+  BotRuntimeRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - lexv2.amazonaws.com
+            Action:
+              - 'sts:AssumeRole'
+      Path: /
+      Policies:
+        - PolicyName: LexRuntimeRolePolicy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 'polly:SynthesizeSpeech'
+                  - 'comprehend:DetectSentiment'
+                Resource: '*'
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: d212b898-2f03-4555-985a-aeaf39504501
+  LB1YL0T:
+    Type: 'AWS::Lex::Bot'
+    Properties:
+      DataPrivacy:
+        ChildDirected: false
+      RoleArn: !GetAtt 
+        - BotRuntimeRole
+        - Arn
+      Name: SearchPhotoBot
+      IdleSessionTTLInSeconds: 60
+      BotLocales:
+        - LocaleId: en_US
+          Description: disambiguate the query string input from user
+          NluConfidenceThreshold: 0.4
+          VoiceSettings:
+            VoiceId: Salli
+          Intents:
+            - Name: SearchIntent
+              Description: Intent to search photos with speicified labels
+              SampleUtterances:
+                - Utterance: 'search some {LabelOne} and {LabelTwo}'
+                - Utterance: 'search some {LabelOne}'
+                - Utterance: 'search {LabelOne}'
+                - Utterance: 'find me some {LabelOne} and {LabelTwo}'
+                - Utterance: 'find some {LabelOne} and {LabelTwo}'
+                - Utterance: 'find {LabelOne} and {LabelTwo}'
+                - Utterance: 'find me some {LabelOne}'
+                - Utterance: 'find {LabelOne}'
+                - Utterance: 'show me some {LabelOne} and {LabelTwo}'
+                - Utterance: 'show me {LabelOne} and {LabelTwo}'
+                - Utterance: 'show {LabelOne} and {LabelTwo}'
+                - Utterance: 'show me some {LabelOne}'
+                - Utterance: 'show me {LabelOne}'
+                - Utterance: 'show {LabelOne}'
+                - Utterance: 'what is {LabelOne}'
+              SlotPriorities:
+                - Priority: 2
+                  SlotName: LabelTwo
+                - Priority: 1
+                  SlotName: LabelOne
+              Slots:
+                - Name: LabelOne
+                  Description: label
+                  SlotTypeName: AMAZON.AlphaNumeric
+                  ValueElicitationSetting:
+                    SlotConstraint: Optional
+                    PromptSpecification:
+                      MessageGroupsList:
+                        - Message:
+                            PlainTextMessage:
+                              Value: What photo
+                      MaxRetries: 1
+                      AllowInterrupt: false
+                - Name: LabelTwo
+                  Description: label
+                  SlotTypeName: AMAZON.AlphaNumeric
+                  ValueElicitationSetting:
+                    SlotConstraint: Optional
+                    PromptSpecification:
+                      MessageGroupsList:
+                        - Message:
+                            PlainTextMessage:
+                              Value: What label?
+                      MaxRetries: 1
+                      AllowInterrupt: false
+            - Name: FallbackIntent
+              Description: Default intent when no other intent matches
+              ParentIntentSignature: AMAZON.FallbackIntent
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 643a2bf7-4709-41d6-ab18-6216b75829a9
