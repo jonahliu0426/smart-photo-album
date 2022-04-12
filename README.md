@@ -45,3 +45,6 @@ Note: AWS Transcribe requires microphone, which requires secured http connection
  
 ### 2.6 OpenSearch (S2)
     Create a domain with Domain name photos, Version OpenSearch 1.2, Instance type r6g.large.search; Enable fine-grained access control -> Create master user -> Master username adminuser, Master password 1234&Qwer; Network Public access, Access policy Only use fine-grained access control
+
+### 2.7 CodePipeline
+    Create repository for each lambda function on AWS Codecommit, and add the newly created repository to a AWS CodePipeline as Source, and use CodeBuild in Build stage, then use Cloudformation in Deploy stage. Next add another action group in Deploy stage, in which we choose Cloudformation as the deploy provider.
