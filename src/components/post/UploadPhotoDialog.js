@@ -46,7 +46,7 @@ function UploadPhotoDialog({ media, handleClose }) {
     // const [createPost] = useMutation(CREATE_POST);
 
 
-    async function handleUploadPhoto() {
+    async function handleUploadPhoto(e) {
         setSubmitting(true);
         const data = await handleImageUpload({ media, filename, labels });
         setSubmitting(false);
