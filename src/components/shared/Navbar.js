@@ -129,7 +129,7 @@ const Search = ({ history }) => {
       >
       </InputBase>
       <Button color="primary" variant="contained" onClick={handleClickSearch}>
-        Search
+        Search Input
       </Button>
       {/* </WhiteTooltip> */}
     </Hidden>
