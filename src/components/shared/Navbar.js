@@ -125,11 +125,11 @@ const Search = ({ history }) => {
           )
         }
         value={query}
-        placeholder="Search Input"
+        placeholder="Search"
       >
       </InputBase>
       <Button color="primary" variant="contained" onClick={handleClickSearch}>
-        Search Input
+        Search
       </Button>
       {/* </WhiteTooltip> */}
     </Hidden>
